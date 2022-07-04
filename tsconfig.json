@@ -1,0 +1,37 @@
+{
+  "compilerOptions":{
+    "target":"es5",
+    "baseUrl":"./",
+    "lib":[
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "paths":{
+      "@app/*":[
+        "src/*"
+      ],
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["src/components/ui/index"],
+      "@pages/*": ["src/pages/*"]
+    },
+    "allowJs":true,
+    "skipLibCheck":true,
+    "esModuleInterop":true,
+    "allowSyntheticDefaultImports":true,
+    "strict":true,
+    "forceConsistentCasingInFileNames":true,
+    "noFallthroughCasesInSwitch":true,
+    "module":"esnext",
+    "moduleResolution":"node",
+    "resolveJsonModule":true,
+    "isolatedModules":true,
+    "noEmit":true,
+    "jsx":"react-jsx"
+  },
+  "exclude":[
+    "node_modules",
+    "**/node_modules/*",
+    "build"
+  ]
+}
