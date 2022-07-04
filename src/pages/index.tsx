@@ -1,27 +1,15 @@
-import { FC, useState } from 'react';
+//@ts-ignore
+import { Navigate, Routes, Route } from 'react-router-dom';
 
-import UiModal from '../components/ui/UiModal';
-
-const Pages: FC = () => {
-  const [isModal, setState] = useState<boolean>(false);
-
-  const toggleModal = (): void => {
-    return setState(!isModal);
-  };
-
+import Home from './home';
+const Pages = () => {
   return (
     <>
-      <button onClick={toggleModal}>Open Modal</button>
-      <div>
-        <UiModal
-          isOpen={isModal}
-          size={'md'}
-          title={'title'}
-          toggle={toggleModal}
-        >
-          <div>dfdfd</div>
-        </UiModal>
-      </div>
+      <Routes>
+        <Route element={<Navigate replace to="/home" />} path="/" />
+        <Route element={<Home />} path="/home" />
+        <Route element={<div>Нет страницы</div>} path="*" />
+      </Routes>
     </>
   );
 };
